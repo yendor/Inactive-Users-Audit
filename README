@@ -1,0 +1,8 @@
+Run the inactive_users.php script to get a list of inactive users from Active Directory
+and compare them to users in Google Apps to verify if they are also inactive in there.
+
+The resulting list is the users who are actuall inactive.
+
+Copy config.default.php to config.php and fill in the fields.
+
+Requires curl, ldap and soap modules to be enabled.
