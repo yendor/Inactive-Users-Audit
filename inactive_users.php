@@ -57,6 +57,10 @@ $api = new GoogleApps();
 
 $loggedIn = $api->Login(Config::GOOGLE_APPS_USER, Config::GOOGLE_APPS_DOMAIN, Config::GOOGLE_APPS_PASS);
 
+if (!$loggedIn) {
+	die("Couldn't login to Google Apps, please check your credentials before trying again\n");
+}
+
 $report = $api->GetReport('accounts');
 
 $inactiveGAusers = array();
